@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/2caac4ffb5.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <script src="translations.js"></script>
+       
+        <button id="languageToggle" class="language-button">English</button>
+
+        
+<div id="header">
+    <div class="container">
+        <nav>
+            
+            <img src ="images/logo.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header"><p id="langHome"></p></a></li>
+                <li><a href="#coding"><p id="langLanguages"></p></a></li>
+                <li><a href="#portfolio"><p id="langPortfolio"></p></a></li>
+                <li><a href="#contact"><p id="langContact"></p></a></li>
+                <i class="fas fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+    </div>
+</div>
+<!---------------about----------------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.png">
+            </div>
+            <div class="about-col-2">
+                <h1>
+                    <span>Lucas Audet</span><br></h1>
+            </div>
+            <div class="about-col-3">
+                <h1 class="sub-title"><p id="langAbtMe"></p></h1>
+                <p id="langAbtMeTxt"></p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')" id="langSkills"></p>
+                    <p class="tab-links" onclick="opentab('experience')" id="langExperience"></p>
+                    <p class="tab-links" onclick="opentab('education')" id="langEducation"></p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><i class="fa-solid fa-arrow-right"></i><a id="langSkills1"></a></li>
+                        <li><i class="fa-solid fa-arrow-right"></i><a id="langSkills2"></a></li>
+                        <li><i class="fa-solid fa-arrow-right"></i><a id="langSkills3"></a></li>
+                        <li><i class="fa-solid fa-arrow-right"></i><a id="langSkills4"></a></li>
+                        <li><i class="fa-solid fa-arrow-right"></i><a id="langSkills5"></a></li>
+                        <li><i class="fa-solid fa-arrow-right"></i><a id="langSkills6"></a></li>
+                        <li><i class="fa-solid fa-arrow-right"></i><a id="langSkills7"></a></li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><a href="https://premieremoisson.com/en"><img src="images/moison.png"></a><span>2023</span><br><p id="langExperience4"></p></li>
+                        <li><a href="https://www.editionsvaudreuil.ca/"><img src="images/vaudreuil.png"></a><span>2022</span><br><p id="langExperience3"></p></li>
+                        <li><a href="https://stmathieuderioux.qc.ca/accueil"><img src="images/smdr.png"></a><span>2021</span><br><p id="langExperience2"></p></li>
+                        <li><a href="https://www.mcdonalds.com/ca/en-ca.html"><img src="images/mcdo.png"></a><span>2020</span><br><p id="langExperience1"></p></li>
+
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2016</span><br><p id="langEducation3"></p></li>
+                        <li><span>2016</span><br><p id="langEducation2"></p></li>
+                        <li><span>2016</span><br><p id="langEducation1"></p></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--------------coding-------------------->
+<div id="coding">
+    <div class="container">
+        <h1 class="sub-title"><a id="langCoding"></a></h1>
+        <div class="coding-list">
+            <div>
+                <i class="fa-brands fa-html5"></i>
+                <h2><p id="langCoding1"></p></h2>
+                <p id="langCoding1LearnMore"></p>
+                <a href="#"><p id="langLearnMore"></p></a>
+            </div>
+            <div>
+                <i class="fa-brands fa-java"></i>
+                <h2><p id="langCoding2"></p></h2>
+                <p id="langCoding2LearnMore"></p>
+                <a href="#"><p id="langLearnMore"></p></a>
+            </div>
+            <div>
+                <i class="fa-brands fa-python"></i>
+                <h2><p id="langCoding3"></p></h2>
+                <p id="langCoding3LearnMore"></p>
+                <a href="#"><p id="langLearnMore"></p></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!----------------portfolio------------------>
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title"><p id="langMyWork"></p></h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work-1.png">
+                <div class="layer">
+                    <h3><p id="langMyWork1"></p></h3>
+                    <p id="langMyWork1Info"></p>
+                    <a href="images/Cross_Word_Lucas_Audet.zip" download><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-2.png">
+                <div class="layer">
+                    <h3><p id="langMyWork2"></p></h3>
+                    <p id="langMyWork2Info"></p>
+                    <a href="images/Lucas_Audet_CV_French.docx" download id="downloadCV"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-3.png">
+                <div class="layer">
+                    <h3><p id="langMyWork3"></p></h3>
+                    <p id="langMyWork3Info"></p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn"><p id="langSeeMore"></p></a>
+    </div>
+</div>
+
+<!------------------contact-------------------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title"><p id="langContactMe"></p></h1>
+                <p><i class="fa-solid fa-share"></i>Lucasriv43@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>514-451-6262</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/people/Lucas-Audet/pfbid02CKqnoPV6TskrWG2GLZ8jbERRzLFTsyhhsjjkm48aX3Yq7RCxMWpLr9kpYAALh9uNl/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.tiktok.com/@riv_4343?is_from_webapp=1&sender_device=pc"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://twitter.com/riv_43"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/43lucas_riv/"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <a href="images/Lucas_Audet_CV_English.docx" download class="btn btn2" id="downloadCVEnglish" style="display: none;"><p>Download CV</p></a>
+                <a href="images/Lucas_Audet_CV_French.docx" download class="btn btn2" id="downloadCVFrench"><p>Télécharger le CV</p></a>
+    
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Name/Nom" required>
+                    <input type="email" name="Email" placeholder="Email" required>
+                    <textarea name="Message" rows="6" placeholder="Message"></textarea>
+                    <button type="submit" class="btn btn2"><p id="langContactSubmit"></p></button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p><i class="fa-regular fa-copyright"></i>Copyright Lucas-Audet</p>
+    </div>
+</div>
+    <script src="scripts.js"></script>
+    </body>
+</html>
+

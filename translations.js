@@ -1,0 +1,117 @@
+const translations = {
+    en: {
+        //Presentation
+        langGreeting: "Hello, I am ",
+        langAbtMe: "About",
+        //Interface
+        langHome: "Main Menu",
+        langLanguages: "Languages",
+        langPortfolio: "Portfolio",
+        langContact: "Contact Me",
+        //About me
+        langAbtMeTxt: "I am a student completing my DEC in computer science and mathematics. I have an interest (technology/computing). I wish to continue my development by enrolling in the Bachelor's degree in software engineering at E.T.S. ",
+        langSkills: "Skills",
+        langSkills1: "Team coordination and leadership",
+        langSkills2: "Java programming skills",
+        langSkills3: "Python development and automation",
+        langSkills4: "Web design and development",
+        langSkills5: "Problem-solving and technical adaptation",
+        langSkills6: "Communication and collaboration",
+        langSkills7: "Basic principles in food safety and hygiene",
+        langExperience: "Experience",
+        langExperience1: "Cook at McDonald's: quick food preparation, compliance with hygiene standards, efficiency during peak times, adaptability and teamwork.",
+        langExperience2: "Boat dock attendant at Saint-Mathieux-De-Rioux: efficient management of port operations, assistance to users, maintenance of the space, application of local regulations, and responsible for purchase, deposit, and refund transactions.",
+        langExperience3: "Clerk at Éditions Vaudreuil: precise preparation of warehouse orders, inventory management, and optimization of storage space.",
+        langExperience4: "Cook at Première Moisson: introduction to team coordination, culinary preparation and maintaining quality standards.",
+        langEducation: "Education",
+        langEducation1: "Primary school: Virginie-Roy",
+        langEducation2: "High School: Collège Notre-Dame",
+        langEducation3: "Cégep: Cégep Gérald Godin",
+        //My coding
+        langCoding: "Programming languages", 
+        langCoding1: "Web designer: creation of a professional CV website, implementation of attractive designs and optimization for better online visibility.",
+        langCoding1LearnMore: "Source of the work: http://127.0.0.1:5500/index.html",
+        langCoding2: "Skills in Java: mastery of Java and use of JavaFX and Scene Builder interfaces for the development of interactive applications.",
+        langCoding2LearnMore: "Source of the work: Project 1 and 2",
+        langCoding3: "Exploring Python: development of a functional Discord bot to perform essential tasks, implementing programming and automation skills.",
+        langCoding3LearnMore: "Source of the work: project 3",
+        langLearnMore: "More Info",
+        langMyWork: "My Projects",
+        //My Work
+        langMyWork: "My Work",
+        langMyWork1: "Crossword game",
+        langMyWork1Info: "JavaFX Crossword: an intuitive application for creating, solving, and customizing crosswords with features such as grid editing, an interactive solver, and automatic puzzle generation.",
+        langMyWork2: "Rush Hour Game",
+        langMyWork2Info: "Rush Hour JavaFX Game: Experience a fast-paced puzzle challenge with grid navigation, block movement, and dynamic levels in this visually appealing application.",
+        langMyWork3: "Discord Bot",
+        langMyWork3Info: "Operational discord bot created using online resources, coded with Python",
+        langSeeMore: "See More",
+        //Contact
+        langContactDownloadCV: "Download CV",
+        langContactMe: "Contact Me",
+        langContactYourName: "Your Name",
+        langContactYourEmail: "Your Email",
+        langContactYourMessage: "Your Message",
+        langContactSubmit: "Send",
+        langContactSent: "Sent"
+
+    },
+
+    fr: {
+        //Presentation
+        langGreeting: "Bonjour, je suis ",
+        langAbtMe: "À Propos",
+        //Interface
+        langHome: "Menu Principal",
+        langLanguages: "Languages",
+        langPortfolio: "Portfolio",
+        langContact: "Me Contacter",
+        //About me
+        langAbtMeTxt: "Je suis un étudiant qui termine son DEC en science informatique et mathématique. J'ai de l'intérêt (technologie/informatique). Je souhaite poursuivre mon développement par mon inscription au baccalauréat en génie logiciel à l'E.T.S. ",
+        langSkills: "Compétences",
+        langSkills1: "Coordination d'équipe et leadership",
+        langSkills2: "Compétences en programmation Java",
+        langSkills3: "Développement Python et automatisation",
+        langSkills4: "Conception et développement web",
+        langSkills5: "Résolution de problèmes et adaptation technique",
+        langSkills6: "Communication et collaboration",
+        langSkills7: "Principes de base en hygiène et sécurité alimentaire",
+        langExperience: "Expérience",
+        langExperience1: "Cuisinier chez McDonald's : préparation rapide des aliments, respect des normes d'hygiène, efficacité en période de pointe, adaptabilité et travail d'équipe.",
+        langExperience2: "Préposé au débarcadère à bateau à Saint-Mathieux-De-Rioux : gestion efficace des opérations portuaires, assistance aux usagers, entretien de l'espace, application des réglementations locales et responsable des transactions d'achat, de dépôt et de remboursement.",
+        langExperience3: "Commis chez Éditions Vaudreuil : préparation précise des commandes en entrepôt, gestion de l'inventaire et optimisation de l'espace de stockage.",
+        langExperience4: "Cuisinier chez Première Moisson : initiation à la coordination d'équipe, préparation culinaire et maintien des standards de qualité.",
+        langEducation: "Éducation",
+        langEducation1: "École primaire: Virginie-Roy",
+        langEducation2: "École Secondaire: Collège Notre-Dame",
+        langEducation3: "Cégep: Cégep Gérald Godin",
+        //My coding
+        langCoding: "Langages de programmation", 
+        langCoding1: "Concepteur de site web : création d'un site CV professionnel, mise en œuvre de designs attractifs et optimisation pour une meilleure visibilité en ligne.",
+        langCoding1LearnMore: "Source du travail : http://127.0.0.1:5500/index.html",
+        langCoding2: "Compétences en Java : maîtrise de Java et utilisation des interfaces JavaFX et Scene Builder pour le développement d'applications interactives.",
+        langCoding2LearnMore: "Source du travail : Projet 1 et 2",
+        langCoding3: "Exploration de Python : développement d'un bot Discord opérationnel pour exécuter des tâches essentielles, mettant en œuvre des compétences en programmation et en automatisation.",
+        langCoding3LearnMore: "Source du travail : projet 3",
+        langLearnMore: "Plus D'Info",
+        langMyWork: "Mes Projets",
+        //My Work
+        langMyWork: "Mon Travail",
+        langMyWork1: "Jeu de mots croisés",
+        langMyWork1Info: "Mots croisés JavaFX : une application intuitive pour créer, résoudre et personnaliser des mots croisés avec des fonctionnalités telles que l'édition de grille, un solveur interactif et la génération automatique de puzzles.",
+        langMyWork2: "Jeu Rush Hour",
+        langMyWork2Info: "Jeu Rush Hour JavaFX : Vivez un défi de puzzle rapide avec navigation de grille, mouvement de blocs et niveaux dynamiques dans cette application visuellement attrayante.",
+        langMyWork3: "Bot Discord",
+        langMyWork3Info: "Bot discord opérationnel réalisé en utilisant des ressources en ligne, codé avec Python",
+        langSeeMore: "Voir Plus",
+        //Contact
+        langContactDownloadCV: "Télécharger le CV",
+        langContactMe: "Me Contacter",
+        langContactYourName: "Votre Nom",
+        langContactYourEmail: "Votre Email",
+        langContactYourMessage: "Votre Message",
+        langContactSubmit: "Envoyer",
+        langContactSent: "Envoyé"
+
+    }
+};  

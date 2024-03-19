@@ -1,0 +1,622 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: #080808;
+    color: #fff;
+}
+#header{
+    width: 100%;
+    height: 0vh;
+    background-image: url(images/background.png);
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    padding: 10px 10%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+/* Ensure the button is fixed at the bottom right of the viewport */
+#languageToggle {
+    position: fixed; /* Fixed positioning relative to the viewport */
+    bottom: 20px; /* 20px from the bottom */
+    right: 20px; /* 20px from the right */
+    z-index: 1000; /* Ensure it stays on top of other content */
+}
+
+/* Optional: Style the button */
+.language-button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.language-button:hover {
+    background-color: #0056b3;
+}
+
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeSlideToLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0); /* Change this value to control the distance */
+    }
+}
+
+
+/* Animation classes */
+.animate-from-right {
+    animation: slideInFromRight 0.5s forwards;
+}
+
+.animate-from-left {
+    animation: slideInFromLeft 0.5s forwards;
+}
+
+.logo{
+    width: 0px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+.fa-solid.fa-arrow-right {
+    margin-right: 10px; /* Adjust the space by changing the value of 10px to whatever suits you */
+}
+
+/* Apply styles to anchor tag and its child elements */
+nav ul li a, nav ul li a p {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    display: inline; /* Ensure p tags are inline with anchor styling */
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+/* Move hover effect to entire anchor tag */
+nav ul li a:hover::after, nav ul li a:hover p::after {
+    width: 100%;
+}
+
+/*---------------------about------------------*/
+#about{
+    padding: 80px 0;
+    color: #ababab;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    border-radius: 15px;
+    margin-top: 10%;
+    height: 500px;
+    width: 300px;
+}
+
+.about-col-2{
+    margin-top:12%;
+    font-size: 20px;
+}
+.about-col-2 h1{
+    font-size: 40px;
+    margin-top: 10px;
+}
+.about-col-2 h1 span{
+    color:#ff004f;
+}
+
+.about-col-3{
+    flex-basis: 45%;
+    margin-top: 100px;
+}
+
+.sub-title{
+    font-size: 50px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.tab-titles{
+    display: flex;
+    margin: 40px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+#experience ul {
+    list-style: none; /* Removes the default list styling */
+    padding: 0; /* Removes the default padding */
+}
+
+#experience li {
+    display: flex; /* Enables flexbox layout */
+    align-items: center; /* Aligns items vertically in the center */
+    gap: 20px; /* Adds some space between the image and the text */
+}
+
+#experience li img {
+    width: 40px; /* Adjust the width as needed */
+    height: 40px; /* Maintains the aspect ratio of the image */
+}
+
+#experience li span, #experience li p {
+    margin: 0; /* Removes the default margin */
+}
+
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+    animation: fadeSlideToLeft 1s forwards;
+}
+
+.tab-contents li:nth-child(1) {
+    opacity: 0;
+    animation-delay: 0s; /* This list item starts animating immediately */
+}
+
+.tab-contents li:nth-child(2) {
+    opacity: 0;
+    animation-delay: 0.5s; /* This list item starts animating 1 second after the first one */
+}
+
+.tab-contents li:nth-child(3) {
+    opacity: 0;
+    animation-delay: 1s; /* This list item starts animating 2 seconds after the first one */
+}
+
+.tab-contents li:nth-child(4) {
+    opacity: 0;
+    animation-delay: 1.5s; /* This list item starts animating 3 seconds after the first one */
+}
+
+.tab-contents li:nth-child(5){
+    opacity: 0;
+    animation-delay: 2s;
+}
+
+.tab-contents li:nth-child(6){
+    opacity: 0;
+    animation-delay: 2.5s;  
+}
+
+.tab-contents li:nth-child(7){
+    opacity: 0;
+    animation-delay: 3s;
+}
+
+.tab-contents li:nth-child(8){
+    opacity: 0;
+    animation-delay: 3.5s;
+}
+
+.tab-contents ul li span{
+    color: #b54769;
+    font-size: 20px;
+}
+
+.tab-contents ul li img{
+    border-radius: 5px;
+    width: 40px;
+}
+
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+
+/*----------------coding--------------*/
+#coding{
+    padding: 30px 0;
+}
+.coding-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.coding-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+.coding-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.coding-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.coding-list div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.coding-list div:hover{
+    background: #ff004f;
+    transform: translateY(-10px);
+
+}
+/*---------------portfolio-----------------------*/
+#portfolio{
+    padding: 50px 0;
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.layer{
+    width:100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.layer a{
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    height: 100%;
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
+}
+.btn:hover{
+    background: #ff004f;
+
+}
+
+/*---------------contact-------------*/
+.contact-left{
+    flex-basis: 30%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+
+.btn.btn2 p {
+    margin: 0;                /* Removes default paragraph margins */
+    display: flex;
+    align-items: center;      /* Aligns text vertically in the center */
+    justify-content: center;  /* Centers text horizontally */
+    height: 100%;             /* Ensures the paragraph fills the entire button */
+}
+
+
+
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+    background:#080808;
+
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+.copyright i{
+    color: #ffffff;
+}
+/*-------------------css for small screen------------*/
+nav .fas{
+    display: none;
+}
+@media only screen and (max-width: 600px){
+    #header{
+        background-image:url(images/phone-background.png);
+        width: 100%;
+        background-position: center;
+    }
+
+    .about-col-1{
+        margin-bottom: 0;
+        width: 15px;
+    }
+
+    .about-col-1 img{
+        border-radius: 15px;
+        width: 50px;
+        height: 75px;
+    }
+
+    .about-col-1, .about-col-2{
+        flex-basis: 50%;
+        box-sizing: border-box; /* This helps include padding and border in the element's total width and height */
+    }
+
+    .about-col-2{
+        font-size: 16px;
+    }
+    .about-col-2 h1{
+        font-size: 22px;
+    }
+
+
+
+    #langExperience1, #langExperience2, #langExperience3, #langExperience4 {
+        font-size: 12px; /* Adjust the font size as needed */
+        padding-right: 0; /* Reduces the right padding, allowing text to extend further right */
+        margin-right: 0; /* Reduces the right margin for the same effect */
+        /* You can also directly set a wider width if applicable */
+        width:200px; /* or you could specify a larger fixed width, e.g., 300px; use 'auto' for natural expansion */
+    }
+
+    #langEducation1, #langEducation2, #langEducation3{
+        padding-right: 0; /* Reduces the right padding, allowing text to extend further right */
+        margin-right: 0; /* Reduces the right margin for the same effect */
+        /* You can also directly set a wider width if applicable */
+        width: 250px;
+    }
+
+    #experience ul {
+        list-style: none; /* Removes the default list styling */
+        padding: 0; /* Removes the default padding */
+    }
+    
+    #experience li {
+        display: flex; /* Enables flexbox layout */
+        align-items: center; /* Aligns items vertically in the center */
+        gap: 10px; /* Adds some space between the image and the text */
+    }
+    
+    #experience li img {
+        width: 30px; /* Adjust the width as needed */
+        height: 30px; /* Maintains the aspect ratio of the image */
+    }
+    
+    #experience li span, #experience li p {
+        margin: 0; /* Removes the default margin */
+    }
+    
+    nav .fas{
+        display: block;
+        font-size: 15px;
+    }
+    nav ul{
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .sub-title{
+        font-size: 40px;
+    }
+
+    .about-col-3{
+        font-size: 14px;
+    }
+
+    .tab-titles{
+        font-size: 14px;
+        margin-right: 15px;
+        display: flex;
+        margin: 20px 0 40px;
+    }
+    .tab-links{
+        margin-right: 10%;
+        font-size: 14px;
+    }
+
+    .coding-list div h2{
+        font-size: 15px;
+    }
+
+    .contact-left, .contact-right{
+        flex-basis: 90%;
+    }
+    .copyright{
+        font-size: 14px;
+    }
+}
+#msg{
+    color: #61b752;
+    margin-top: -40px;
+    display: block;
+}
