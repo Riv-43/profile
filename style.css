@@ -168,8 +168,8 @@ nav ul li a:hover::after, nav ul li a:hover p::after {
 .about-col-1 img{
     border-radius: 15px;
     margin-top: 40%;
-    height: auto;
-    width: 150px;
+    height: 500px;
+    width: auto;
 }
 
 .about-col-2{
