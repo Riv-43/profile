@@ -40,7 +40,7 @@ nav{
 /* Optional: Style the button */
 .language-button {
     padding: 10px;
-    background-color: #007bff;
+    background-color: #ff004f;
     color: white;
     border: none;
     border-radius: 5px;
@@ -48,7 +48,7 @@ nav{
 }
 
 .language-button:hover {
-    background-color: #0056b3;
+    background-color: #aa0036;
 }
 
 @keyframes textclip {
