@@ -178,20 +178,10 @@ nav ul li a:hover::after, nav ul li a:hover p::after {
     flex-basis: 25%;
 }
 
-.about-col-2 article{
-    background: linear-gradient(
-    to right, 
-    hsl(98 100% 62%), 
-    hsl(204 100% 59%)
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-align: center;
-}
-
 .about-col-2 h1{
     font-size: 6vmin;
     line-height: 1.1;
+    color:#ff004f;
 }
 
 
