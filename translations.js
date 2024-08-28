@@ -23,7 +23,7 @@ const translations = {
         langExperience2: "Dockhand at Saint-Mathieux-De-Rioux: efficient management of port operations, user assistance, space maintenance, application of local regulations and responsible for purchase, deposit, and refund transactions.",
         langExperience3: "Clerk at Éditions Vaudreuil: precise order preparation in warehouse, inventory management, and optimization of storage space.",
         langExperience4: "Cook at Première Moisson: introduction to team coordination, culinary preparation and maintenance of quality standards.",
-        langExperience5: "Administrative Officer and IT Resources Coordinator at Sainte-Justine's Hospital",
+        langExperience5: "Administrative Agent and IT Resources Coordinator at Sainte-Justine's Hospital",
         langEducation: "Education",
         langEducation1: "Elementary School: Virginie-Roy",
         langEducation2: "High School: Collège Notre-Dame",
