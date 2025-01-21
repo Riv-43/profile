@@ -22,12 +22,39 @@ body{
     padding: 10px 10%;
 }
 
-nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: nowrap;
+nav {
+    position: relative; /* Allows for absolute positioning of child elements */
+    display: block; /* Change to block to allow positioning */
 }
+
+nav ul {
+    position: relative; /* Allows for absolute positioning of list items */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+nav ul li {
+    position: absolute; /* Allows each list item to be positioned independently */
+}
+
+nav ul li:nth-child(1) {
+    left: 40px; /* Further increased space for the first link */
+}
+
+nav ul li:nth-child(2) {
+    left: 190px; /* Further increased space for the second link */
+}
+
+nav ul li:nth-child(3) {
+    left: 340px; /* Further increased space for the third link */
+}
+
+nav ul li:nth-child(4) {
+    left: 490px; /* Further increased space for the fourth link */
+}
+
+
 
 /* Ensure the button is fixed at the bottom right of the viewport */
 #languageToggle {
@@ -156,10 +183,26 @@ nav ul li a:hover::after, nav ul li a:hover p::after {
     padding: 75px 0;
     color: #ababab;
 }
-.row{
+.row {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start; /* Aligns all columns at the start */
     flex-wrap: wrap;
+}
+
+
+.about-col-2 {
+    margin-top: 12%;
+    font-size: 10px;
+    flex-basis: 25%;
+    text-align: center; /* Centers the text within the column */
+}
+
+
+.row > div {
+    flex: 1; /* Ensures each child takes equal space */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    padding: 10px; /* Optional: Add padding for spacing */
 }
 
 .about col-1{
@@ -167,7 +210,7 @@ nav ul li a:hover::after, nav ul li a:hover p::after {
 }
 .about-col-1 img{
     border-radius: 15px;
-    margin-top: 40%;
+    margin-top: 20%;
     height: 500px;
     width: auto;
 }
@@ -186,9 +229,10 @@ nav ul li a:hover::after, nav ul li a:hover p::after {
 
 
 
-.about-col-3{
-    flex-basis: 35%;
-    margin-top: 100px;
+.about-col-3 {
+    flex: none; /* Prevents the column from growing or shrinking */
+    width: 300px; /* Set a fixed width for the column */
+    position: relative; /* Allows for positioning adjustments if needed */
 }
 
 .additional-info {
@@ -210,13 +254,19 @@ nav ul li a:hover::after, nav ul li a:hover p::after {
     display: flex;
     margin: 40px 0 40px;
 }
-.tab-links{
+.tab-links {
     margin-right: 50px;
     font-size: 20px;
     font-weight: 500;
     cursor: pointer;
     position: relative;
+    transition: color 0.5s; /* Add transition for color change */
 }
+
+.tab-links:hover {
+    color: #ff004f; /* Change text color to red on hover */
+}
+
 .tab-links::after{
     content: '';
     width: 0;
@@ -523,6 +573,29 @@ form .btn2{
 nav .fas{
     display: none;
 }
+/* Add media query for mobile devices */
+@media (max-width: 768px) {
+    nav ul {
+        position: static; /* Change position to static for mobile */
+        display: block; /* Display as block to stack items vertically */
+        text-align: left; /* Align text to the left */
+        padding-left: 20px; /* Add padding to the left for spacing */
+    }
+
+    nav ul li {
+        position: static; /* Remove absolute positioning */
+        margin: 10px 0; /* Add margin for spacing between items */
+    }
+
+    nav .fas.fa-bars {
+        display: block; /* Show the menu icon on mobile */
+    }
+
+    nav .fas.fa-xmark {
+        display: block; /* Show the close icon on mobile */
+    }
+}
+
 @media only screen and (max-width: 600px){
     #header{
         background-image:url(images/phone-background.png);

@@ -47,6 +47,12 @@
     const toggleButton = document.getElementById('languageToggle');
     const content = document.getElementById('content');
 
+    // Google Analytics setup
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DK3J9VP57M');
+
     toggleButton.addEventListener('click', () => {
         if (toggleButton.textContent === 'English') {
             toggleButton.textContent = 'Français';
